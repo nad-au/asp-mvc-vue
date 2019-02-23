@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css" >
+    <link rel="stylesheet" href="/vendor/select2/dist/css/select2.css" />
+    <link rel="stylesheet" href="/css/index.css">
+    <title>@ViewData["Title"]</title>
+</head>
+
+<body>
+@RenderBody()
+    
+<environment names="Development">
+    <script src="/vendor/jquery/dist/jquery.js"></script>
+    <script src="/vendor/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/vendor/select2/dist/js/select2.js"></script>
+    <script src="/vendor/vue/dist/vue.js"></script>
+    <script src="/vendor/axios/dist/axios.js"></script>
+</environment>
+@RenderSection("Scripts", required: false)
+</body>
+
+</html>

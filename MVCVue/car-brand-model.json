@@ -1,0 +1,626 @@
+﻿[
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 1,
+    "modelName": "i3"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 2,
+    "modelName": "1-Series"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 3,
+    "modelName": "2-Series"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 4,
+    "modelName": "3-Series"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 5,
+    "modelName": "3-Series, M3"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 6,
+    "modelName": "4-Series, M4"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 7,
+    "modelName": "3-Series GT"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 8,
+    "modelName": "5-Series"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 9,
+    "modelName": "5-Series, M5"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 10,
+    "modelName": "5-Series GT"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 11,
+    "modelName": "6-Series GT"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 12,
+    "modelName": "6-Series, M6"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 13,
+    "modelName": "8-Series"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 14,
+    "modelName": "7-Series"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 15,
+    "modelName": "Z1"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 16,
+    "modelName": "Z3, M"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 17,
+    "modelName": "Z4"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 18,
+    "modelName": "M1"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 19,
+    "modelName": "Z8"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 20,
+    "modelName": "i8"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 21,
+    "modelName": "X1"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 22,
+    "modelName": "X3"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 23,
+    "modelName": "X4"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 24,
+    "modelName": "X4"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 25,
+    "modelName": "X5"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 26,
+    "modelName": "X6"
+  },
+  {
+    "brandId": 1,
+    "brandName": "BMW",
+    "modelId": 27,
+    "modelName": "X7"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 28,
+    "modelName": "Cimarron"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 29,
+    "modelName": "BLS"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 30,
+    "modelName": "ATS"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 31,
+    "modelName": "ELR"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 32,
+    "modelName": "Catera"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 33,
+    "modelName": "CTS"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 34,
+    "modelName": "Series 60"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 35,
+    "modelName": "Series 61"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 36,
+    "modelName": "Series 65"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 37,
+    "modelName": "Series 62"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 38,
+    "modelName": 6200
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 39,
+    "modelName": "Calais"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 40,
+    "modelName": "Seville"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 41,
+    "modelName": "STS"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 42,
+    "modelName": "Sedan de Ville"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 43,
+    "modelName": "DTS"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 44,
+    "modelName": "XTS"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 45,
+    "modelName": "CT6"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 46,
+    "modelName": "Coupe de Ville"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 47,
+    "modelName": "Brougham"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 48,
+    "modelName": "Fleetwood"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 49,
+    "modelName": "Series 75"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 50,
+    "modelName": "Eldorado"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 51,
+    "modelName": "XT4"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 52,
+    "modelName": "SRX"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 53,
+    "modelName": "XT5"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 54,
+    "modelName": "Escalade"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 55,
+    "modelName": "Allanté"
+  },
+  {
+    "brandId": 2,
+    "brandName": "Cadillac",
+    "modelId": 56,
+    "modelName": "XLR"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 57,
+    "modelName": "Picanto"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 58,
+    "modelName": "Pride"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 59,
+    "modelName": "Rio"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 60,
+    "modelName": "Soul"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 61,
+    "modelName": "Avella"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 62,
+    "modelName": "Cee'd"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 63,
+    "modelName": "Sephia"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 64,
+    "modelName": "Cerato"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 65,
+    "modelName": "Forte"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 66,
+    "modelName": "Shuma"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 67,
+    "modelName": "Concord"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 68,
+    "modelName": "Clarus"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 69,
+    "modelName": "Magentis"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 70,
+    "modelName": "Stinger"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 71,
+    "modelName": "Potentia"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 72,
+    "modelName": "Enterprise"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 73,
+    "modelName": "Opirus"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 74,
+    "modelName": "Cadenza"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 75,
+    "modelName": "Quoris"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 76,
+    "modelName": "Elan"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 77,
+    "modelName": "Venga"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 78,
+    "modelName": "Carens"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 79,
+    "modelName": "Joice"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 80,
+    "modelName": "Carnival"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 81,
+    "modelName": "Retona"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 82,
+    "modelName": "Stonic"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 83,
+    "modelName": "Niro"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 84,
+    "modelName": "Sportage"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 85,
+    "modelName": "Sorento"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 86,
+    "modelName": "Mohave"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 87,
+    "modelName": "Bongo"
+  },
+  {
+    "brandId": 3,
+    "brandName": "Kia",
+    "modelId": 88,
+    "modelName": "Bongo Frontier"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 89,
+    "modelName": "Fusca"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 90,
+    "modelName": "Gol"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 91,
+    "modelName": "Voyage"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 92,
+    "modelName": "Parati"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 93,
+    "modelName": "Fox"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 94,
+    "modelName": "Brasilia"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 95,
+    "modelName": "Apollo"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 96,
+    "modelName": "Logus"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 97,
+    "modelName": "Pointer"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 98,
+    "modelName": "Santana"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 99,
+    "modelName": "Quantum"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 100,
+    "modelName": "SpaceFox"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 101,
+    "modelName": "SP2"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 102,
+    "modelName": "Saveiro"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 103,
+    "modelName": "Golf"
+  },
+  {
+    "brandId": 4,
+    "brandName": "Volkswagen",
+    "modelId": 104,
+    "modelName": "Passat"
+  }
+]
