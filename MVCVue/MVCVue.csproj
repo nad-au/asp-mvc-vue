@@ -7,7 +7,9 @@
 
   <ItemGroup>
     <Content Remove="car-brand-model.json" />
+    <Content Remove="Views\CascadingDropdown\Index.cshtml" />
     <Content Remove="Views\Home\Index.cshtml" />
+    <Content Remove="Views\SimpleDropdown\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,11 +28,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Home\Index.cshtml" />
+    <UpToDateCheckInput Remove="Views\CascadingDropdown\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\CascadingDropdown\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,7 +40,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\CascadingDropdown\Index.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\SimpleDropdown\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

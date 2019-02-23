@@ -2,44 +2,15 @@
     Layout = "_Layout";
 }
 
-@model MVCVue.Models.CarModel
-
-<div id="vueApp" class="container-fluid">
+<div class="container-fluid">
     <div class="row">
         <main class="col">
-            <h1>Cars</h1>
-            @using (Html.BeginForm("Index", "Home", FormMethod.Post))
-            {
-                <div class="form-group row">
-                    @Html.LabelFor(m => m.BrandId, new { @class = "col-sm-2 col-form-label" })
-                    <div class="col-sm-10">
-                        <select id="@Html.IdFor(m => m.BrandId)" name="@Html.NameFor(m => m.BrandId)" class="form-control"
-                                v-model="selectedBrandId" v-on:change="brandChanged">
-                            <option value="">Select a brand</option>
-                            <option v-for="brand in brands" v-bind:value="brand.brandId">{{brand.brandName}}</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    @Html.LabelFor(m => m.ModelId, new { @class = "col-sm-2 col-form-label" })
-                    <div class="col-sm-10">
-                        <select id="@Html.IdFor(m => m.ModelId)" name="@Html.NameFor(m => m.ModelId)" class="form-control"
-                                v-model="selectedModelId">
-                            <option value="">Select a model</option>
-                            <option v-for="model in models" v-bind:value="model.modelId">{{model.modelName}}</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                        <button class="btn btn-primary" type="submit">Save</button>
-                    </div>
-                </div>
-            }
+            <h1>MVC Vue examples</h1>
+            <p>Examples demonstrating Razor-generated views with Vue integration.</p>
+            <ul class="list-group">
+                <li class="list-group-item">@Html.ActionLink("Simple dropdown", "Index", "SimpleDropdown")</li>
+                <li class="list-group-item">@Html.ActionLink("Cascading dropdowns", "Index", "CascadingDropdown")</li>
+            </ul>
         </main>
     </div>
 </div>
-@section Scripts {
-    <script src="/js/index.js"></script>
-}
