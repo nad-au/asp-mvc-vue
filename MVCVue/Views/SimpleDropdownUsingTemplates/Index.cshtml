@@ -8,29 +8,33 @@
     <div class="row">
         <main class="col">
             <h1>Cars</h1>
-            @using (Html.BeginForm("Index", "SimpleDropdown", FormMethod.Post))
+            @using (Html.BeginForm("Index", "SimpleDropdownUsingTemplates", FormMethod.Post))
             {
                 <div class="form-group row">
                     @Html.LabelFor(m => m.BrandId, new { @class = "col-sm-2 col-form-label" })
                     <div class="col-sm-10">
-                        <select id="@Html.IdFor(m => m.BrandId)" name="@Html.NameFor(m => m.BrandId)" class="form-control"
-                                v-model="selectedBrandId">
-                            <option value="">Select a brand</option>
-                            <option v-for="brand in brands" v-bind:value="brand.brandId">{{brand.brandName}}</option>
-                        </select>
+                        <brand-select 
+                            value="3"
+                            v-model="name" 
+                            id="@Html.IdFor(m => m.BrandId)" 
+                            name="@Html.NameFor(m => m.BrandId)" 
+                            class="form-control">
+                        </brand-select>
                     </div>
                 </div>
 
+                <div>{{name}}</div>
                 <div class="form-group row">
                     <div class="col-sm-10">
                         <button class="btn btn-primary" type="submit">Save</button>
                         @Html.ActionLink("Cancel", "Index", "Home", null, new { @class = "btn btn-secondary" })
                     </div>
                 </div>
+
             }
         </main>
     </div>
 </div>
 @section Scripts {
-    <script src="/js/simple-dropdown.js"></script>
+    <script src="/js/simple-dropdown-using-templates.js"></script>
 }
