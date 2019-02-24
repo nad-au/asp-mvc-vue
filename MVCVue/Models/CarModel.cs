@@ -2,6 +2,14 @@
 
 namespace MVCVue.Models
 {
+    public static class CarModels
+    {
+        public const long BMW = 1;
+        public const long Cadillac = 2;
+        public const long Kia = 3;
+        public const long Volkswagen = 4;
+    }
+
     public class CarModel
     {
         [DisplayName("Brand")]
