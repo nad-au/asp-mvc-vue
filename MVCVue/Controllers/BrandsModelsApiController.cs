@@ -7,9 +7,9 @@ using ServiceStack;
 
 namespace MVCVue.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/brands")]
     [ApiController]
-    public class BrandsController : ControllerBase
+    public class BrandsModelsApiController : ControllerBase
     {
         // GET api/brands
         [HttpGet]

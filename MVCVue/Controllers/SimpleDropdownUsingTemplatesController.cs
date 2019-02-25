@@ -7,7 +7,7 @@ namespace MVCVue.Controllers
     {
         public IActionResult Index()
         {
-            return View(new CarModel { BrandId = CarModels.Kia});
+            return View(new CarModel { BrandId = CarBrands.Kia});
         }
 
         [HttpPost]
