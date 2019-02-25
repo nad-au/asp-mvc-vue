@@ -39,7 +39,7 @@ gulp.task("min:css", () => {
 
 gulp.task("min", gulp.series(["min:js", "min:css"]));
 
-gulp.task('copy-vendor', function () {
+gulp.task('copy-vendor', () => {
     return gulp.src([
         './node_modules/axios/dist/**',
         './node_modules/bootstrap/dist/**',
@@ -52,4 +52,4 @@ gulp.task('copy-vendor', function () {
 
 
 // A 'default' task is required by Gulp v4
-gulp.task("default", gulp.series(["min"]));
+gulp.task("default", gulp.series(["copy-vendor"]));
