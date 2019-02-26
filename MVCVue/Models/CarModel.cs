@@ -25,5 +25,8 @@ namespace MVCVue.Models
 
         [DisplayName("Model")]
         public long ModelId { get; set; }
+
+        [DisplayName("Details")]
+        public string CarDetails { get; set; }
     }
 }

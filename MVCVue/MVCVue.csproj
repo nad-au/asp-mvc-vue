@@ -11,6 +11,8 @@
     <Content Remove="Views\CascadingDropdownUsingTemplates\Index.cshtml" />
     <Content Remove="Views\CascadingDropdown\Index.cshtml" />
     <Content Remove="Views\Home\Index.cshtml" />
+    <Content Remove="Views\MultipleRows\EditorTemplates\CarModel.cshtml" />
+    <Content Remove="Views\MultipleRows\Index.cshtml" />
     <Content Remove="Views\SimpleDropdownUsingTemplates\Index.cshtml" />
     <Content Remove="Views\SimpleDropdown\Index.cshtml" />
   </ItemGroup>
@@ -47,6 +49,8 @@
     <None Include="Views\CascadingDropdownUsingTemplates\Index.cshtml" />
     <None Include="Views\CascadingDropdown\Index.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\MultipleRows\EditorTemplates\CarModel.cshtml" />
+    <None Include="Views\MultipleRows\Index.cshtml" />
     <None Include="Views\SimpleDropdownUsingTemplates\Index.cshtml" />
     <None Include="Views\SimpleDropdown\Index.cshtml" />
   </ItemGroup>
