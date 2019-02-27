@@ -3,11 +3,11 @@ using MVCVue.Models;
 
 namespace MVCVue.Controllers
 {
-    public class CascadingDropdownUsingReUsableTemplatesController : Controller
+    public class SimpleDropdownUsingComponentsController : Controller
     {
         public IActionResult Index()
         {
-            return View(new CarModel { BrandId = CarBrands.Kia, ModelId = CarModels.KiaSoul });
+            return View(new CarModel { BrandId = CarBrands.Kia});
         }
 
         [HttpPost]

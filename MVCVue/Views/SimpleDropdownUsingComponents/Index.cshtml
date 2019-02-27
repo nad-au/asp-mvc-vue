@@ -8,7 +8,7 @@
     <div class="row">
         <main class="col">
             <h1>Cars</h1>
-            @using (Html.BeginForm("Index", "SimpleDropdownUsingTemplates", FormMethod.Post))
+            @using (Html.BeginForm("Index", "SimpleDropdownUsingComponents", FormMethod.Post))
             {
                 <div class="form-group row">
                     @Html.LabelFor(m => m.BrandId, new { @class = "col-sm-2 col-form-label" })
@@ -40,5 +40,5 @@
     </div>
 </div>
 @section Scripts {
-    <script src="/js/simple-dropdown-using-templates.js"></script>
+    <script src="/js/simple-dropdown-using-components.js"></script>
 }

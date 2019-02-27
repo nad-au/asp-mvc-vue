@@ -3,7 +3,7 @@ using MVCVue.Models;
 
 namespace MVCVue.Controllers
 {
-    public class CascadingDropdownUsingTemplatesController : Controller
+    public class CascadingDropdownUsingReusableComponentsController : Controller
     {
         public IActionResult Index()
         {

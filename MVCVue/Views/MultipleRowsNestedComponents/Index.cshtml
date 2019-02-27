@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@model MVCVue.Models.MultipleCarModel
+
+<div class="container-fluid">
+    <div class="row">
+        <main class="col">
+            <h1>Cars</h1>
+            @using (Html.BeginForm("Index", "MultipleRowsNestedComponents", FormMethod.Post))
+            {
+                @Html.EditorFor(m => m.CarModels)
+
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button class="btn btn-primary" type="submit">Save</button>
+                        @Html.ActionLink("Cancel", "Index", "Home", null, new { @class = "btn btn-secondary" })
+                    </div>
+                </div>
+
+            }
+        </main>
+    </div>
+</div>
+@section Scripts {
+    <script src="/js/vue-templates.js"></script>
+    <script src="/js/multiple-rows-nested-components.js"></script>
+}
