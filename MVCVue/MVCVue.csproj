@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Content Remove="car-brand-model.json" />
+    <Content Remove="Views\CascadingDropdownWithComponentsAndSelect2\Index.cshtml" />
     <Content Remove="Views\CascadingDropdownUsingReusableComponents\Index.cshtml" />
     <Content Remove="Views\CascadingDropdownUsingComponents\Index.cshtml" />
     <Content Remove="Views\CascadingDropdown\Index.cshtml" />
@@ -47,6 +48,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\CascadingDropdownWithComponentsAndSelect2\Index.cshtml" />
     <None Include="Views\CascadingDropdownUsingReusableComponents\Index.cshtml" />
     <None Include="Views\CascadingDropdownUsingComponents\Index.cshtml" />
     <None Include="Views\CascadingDropdown\Index.cshtml" />
