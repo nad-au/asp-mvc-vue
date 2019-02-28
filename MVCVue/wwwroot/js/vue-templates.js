@@ -114,6 +114,68 @@ Vue.component('vue-select2', {
     `
 });
 
+Vue.component('vue-select2-secondary', {
+    props: ['value','initial','ajaxUrl','placeholder','valueName', 'displayName'],
+    data: function() {
+        return {
+            initialValueSet: false
+        };
+    },
+    mounted: function () {
+        const vm = this;
+        $(this.$el)
+            .select2({
+                placeholder: this.placeholder
+            })
+            .trigger('change')
+            .on('change',
+                function() {
+                    vm.$emit('input', this.value);
+                });
+    },
+    watch: {
+        ajaxUrl: function(ajaxUrl) {
+            ax.get(ajaxUrl)
+                .then(response => {
+                    $(this.$el)
+                        .empty()
+                        .select2({
+                            placeholder: this.placeholder,
+                            allowClear: true,
+                            data: response.data.map(d => {
+                                return {
+                                    id: d[this.valueName],
+                                    text: d[this.displayName]
+                                };
+                            })
+                        })
+                        .val('')
+                        .trigger('change');
+
+                    if (!this.initialValueSet) {
+                        this.$emit('input', this.initial);
+                        this.initialValueSet = true;
+                    }
+                })
+                .catch(e => { this.errors.push(e); });
+        },
+        value: function (value) {
+            // update value
+            $(this.$el)
+                .val(value)
+                .trigger('change');
+        }
+    },
+    destroyed: function () {
+        $(this.$el).off().select2('destroy');
+    },
+    template: `
+        <select>
+            <option></option>
+        </select>
+    `
+});
+
 Vue.component('vue-select2-multiple-secondary', {
     props: ['value','initial','ajaxUrl','placeholder','valueName', 'displayName'],
     data: function() {
@@ -169,7 +231,6 @@ Vue.component('vue-select2-multiple-secondary', {
     },
     template: `
         <select>
-            <option></option>
         </select>
     `
 });
