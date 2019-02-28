@@ -114,7 +114,7 @@ Vue.component('vue-select2', {
     `
 });
 
-Vue.component('vue-select2-secondary', {
+Vue.component('vue-select2-multiple-secondary', {
     props: ['value','initial','ajaxUrl','placeholder','valueName', 'displayName'],
     data: function() {
         return {
@@ -130,7 +130,7 @@ Vue.component('vue-select2-secondary', {
             .trigger('change')
             .on('change',
                 function() {
-                    vm.$emit('input', this.value);
+                    vm.$emit('input', $(this).val());
                 });
     },
     watch: {
@@ -160,10 +160,8 @@ Vue.component('vue-select2-secondary', {
                 .catch(e => { this.errors.push(e); });
         },
         value: function (value) {
-            // update value
-            $(this.$el)
-                .val(value)
-                .trigger('change');
+            if ([...value].sort().join(",") !== [...$(this.$el).val()].sort().join(","))
+                $(this.$el).val(value).trigger('change');
         }
     },
     destroyed: function () {

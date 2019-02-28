@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace MVCVue.Models
 {
@@ -14,6 +15,7 @@ namespace MVCVue.Models
     {
         public const long BMW5Series = 8;
         public const long CadilacCoupeDeVille = 46;
+        public const long KiaRio = 59;
         public const long KiaSoul = 60;
         public const long VolkswagenGolf = 103;
     }
@@ -28,5 +30,14 @@ namespace MVCVue.Models
 
         [DisplayName("Details")]
         public string CarDetails { get; set; }
+    }
+
+    public class CarMultipleModel
+    {
+        [DisplayName("Brand")]
+        public long BrandId { get; set; }
+
+        [DisplayName("Model")]
+        public IEnumerable<long> ModelIds { get; set; }
     }
 }
