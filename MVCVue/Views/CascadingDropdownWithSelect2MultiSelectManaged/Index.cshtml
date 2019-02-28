@@ -3,31 +3,29 @@
 }
 
 @using ServiceStack
-@model MVCVue.Models.CarMultipleModel
+@model MVCVue.Models.CarBrandMultipleModel
 
 <div id="vueApp" class="container-fluid">
     <div class="row">
         <main class="col">
             <h1>Cars</h1>
-            @using (Html.BeginForm("Index", "CascadingDropdownWithSelect2MultiSelect", FormMethod.Post))
+            @using (Html.BeginForm("Index", "CascadingDropdownWithSelect2MultiSelectManaged", FormMethod.Post))
             {
                 <div class="form-group row">
-                    @Html.LabelFor(m => m.BrandId, new { @class = "col-sm-2 col-form-label" })
+                    @Html.LabelFor(m => m.BrandIds, new { @class = "col-sm-2 col-form-label" })
                     <div class="col-sm-10">
-                        <vue-select2 class="form-control"
-                                 id="@Html.IdFor(m => m.BrandId)"
-                                 name="@Html.NameFor(m => m.BrandId)"
-                                 ajax-url="/api/brands"
+                        <vue-select2-multiple-managed class="form-control"
+                                 id="@Html.IdFor(m => m.BrandIds)"
+                                 name="@Html.NameFor(m => m.BrandIds)"
                                  placeholder="Select a brand..."
-                                 initial="@Model.BrandId"
-                                 value-name="brandId"
-                                 display-name="brandName"
-                                 v-model="brandId">
-                        </vue-select2>
+                                 v-bind:initial="[@Model.BrandIds.ToCsv()]"
+                                 v-bind:data-source="brands"
+                                 v-model="selectedBrandIds">
+                        </vue-select2-multiple-managed>
                     </div>
                 </div>
 
-                <div class="form-group row">
+                @*<div class="form-group row">
                     @Html.LabelFor(m => m.ModelIds, new { @class = "col-sm-2 col-form-label" })
                     <div class="col-sm-10">
                         <vue-select2-multiple-secondary class="form-control"
@@ -41,7 +39,7 @@
                                                v-model="modelId">
                         </vue-select2-multiple-secondary>
                     </div>
-                </div>
+                </div>*@
 
                 <div class="form-group row">
                     <div class="col-sm-10">
@@ -51,7 +49,7 @@
                 <div class="form-group row">
                     <div class="col-sm-10">
                         <button class="btn btn-primary" type="submit">Save</button>
-                        <button v-on:click="brandId = ''" class="btn btn-warning" type="button">Clear</button>
+                        <button v-on:click="selectedBrandIds = []" class="btn btn-warning" type="button">Clear</button>
                         @Html.ActionLink("Cancel", "Index", "Home", null, new { @class = "btn btn-secondary" })
                     </div>
                 </div>
@@ -62,5 +60,5 @@
 </div>
 @section Scripts {
     <script src="/js/vue-templates.js"></script>
-    <script src="/js/cascading-dropdown-with-components-select2-multiselect.js"></script>
+    <script src="/js/cascading-dropdown-select2-multiselect-managed.js"></script>
 }

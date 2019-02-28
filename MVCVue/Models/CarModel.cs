@@ -40,4 +40,13 @@ namespace MVCVue.Models
         [DisplayName("Model")]
         public IEnumerable<long> ModelIds { get; set; }
     }
+
+    public class CarBrandMultipleModel
+    {
+        [DisplayName("Brand")]
+        public IEnumerable<long> BrandIds { get; set; }
+
+        [DisplayName("Model")]
+        public IEnumerable<long> ModelIds { get; set; }
+    }
 }

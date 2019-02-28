@@ -10,6 +10,7 @@
     <Content Remove="Views\CascadingDropdownWithComponentsAndSelect2\Index.cshtml" />
     <Content Remove="Views\CascadingDropdownUsingReusableComponents\Index.cshtml" />
     <Content Remove="Views\CascadingDropdownUsingComponents\Index.cshtml" />
+    <Content Remove="Views\CascadingDropdownWithSelect2MultiSelectManaged\Index.cshtml" />
     <Content Remove="Views\CascadingDropdownWithSelect2MultiSelect\Index.cshtml" />
     <Content Remove="Views\CascadingDropdown\Index.cshtml" />
     <Content Remove="Views\Home\Index.cshtml" />
@@ -52,6 +53,7 @@
     <None Include="Views\CascadingDropdownWithComponentsAndSelect2\Index.cshtml" />
     <None Include="Views\CascadingDropdownUsingReusableComponents\Index.cshtml" />
     <None Include="Views\CascadingDropdownUsingComponents\Index.cshtml" />
+    <None Include="Views\CascadingDropdownWithSelect2MultiSelectManaged\Index.cshtml" />
     <None Include="Views\CascadingDropdownWithSelect2MultiSelect\Index.cshtml" />
     <None Include="Views\CascadingDropdown\Index.cshtml" />
     <None Include="Views\Home\Index.cshtml" />

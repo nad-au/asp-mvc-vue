@@ -98,7 +98,6 @@ Vue.component('vue-select2', {
     },
     watch: {
         value: function (value) {
-            // update value
             $(this.$el)
                 .val(value)
                 .trigger('change');
@@ -109,7 +108,6 @@ Vue.component('vue-select2', {
     },
     template: `
         <select>
-            <option></option>
         </select>
     `
 });
@@ -160,7 +158,6 @@ Vue.component('vue-select2-secondary', {
                 .catch(e => { this.errors.push(e); });
         },
         value: function (value) {
-            // update value
             $(this.$el)
                 .val(value)
                 .trigger('change');
@@ -171,7 +168,49 @@ Vue.component('vue-select2-secondary', {
     },
     template: `
         <select>
-            <option></option>
+        </select>
+    `
+});
+
+Vue.component('vue-select2-multiple', {
+    props: ['value','initial','ajaxUrl','placeholder','valueName', 'displayName'],
+    mounted: function () {
+        const vm = this;
+        ax.get(this.ajaxUrl)
+            .then(response => {
+                $(this.$el)
+                    .empty()
+                    .select2({
+                        placeholder: this.placeholder,
+                        allowClear: true,
+                        data: response.data.map(d => { return {
+                                id: d[this.valueName],
+                                text: d[this.displayName]
+                            };
+                        })
+                    })
+                    .val(this.value)
+                    .trigger('change')
+                    .on('change',
+                        function() {
+                            vm.$emit('input', $(this).val());
+                        });
+
+                vm.$emit('input', this.initial);
+            })
+            .catch(e => { this.errors.push(e); });
+    },
+    watch: {
+        value: function (value) {
+            if ([...value].sort().join(",") !== [...$(this.$el).val()].sort().join(","))
+                $(this.$el).val(value).trigger('change');
+        }
+    },
+    destroyed: function () {
+        $(this.$el).off().select2('destroy');
+    },
+    template: `
+        <select multiple="multiple">
         </select>
     `
 });
@@ -230,7 +269,53 @@ Vue.component('vue-select2-multiple-secondary', {
         $(this.$el).off().select2('destroy');
     },
     template: `
-        <select>
+        <select multiple="multiple">
+        </select>
+    `
+});
+
+Vue.component('vue-select2-multiple-managed', {
+    props: ['value', 'initial', 'placeholder', 'dataSource'],
+    mounted: function() {
+        const vm = this;
+        $(this.$el)
+            .select2({
+                placeholder: this.placeholder,
+                allowClear: true,
+                data: this.dataSource
+            })
+            .val(this.value)
+            .trigger('change')
+            .on('change',
+                function() {
+                    vm.$emit('input', $(this).val());
+                });
+    },
+    watch: {
+        value: function(value) {
+            if ([...value].sort().join(",") !== [...$(this.$el).val()].sort().join(","))
+                $(this.$el).val(value).trigger('change');
+        },
+        dataSource: function(dataSource) {
+            $(this.$el).empty().select2({
+                    placeholder: this.placeholder,
+                    allowClear: true,
+                    data: dataSource
+                })
+                .val('')
+                .trigger('change');
+
+            if (!this.initialValueSet) {
+                this.$emit('input', this.initial);
+                this.initialValueSet = true;
+            }
+        }
+    },
+    destroyed: function () {
+        $(this.$el).off().select2('destroy');
+    },
+    template: `
+        <select multiple="multiple">
         </select>
     `
 });
