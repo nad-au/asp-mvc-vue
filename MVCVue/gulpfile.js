@@ -46,6 +46,7 @@ gulp.task('copy-vendor', () => {
         './node_modules/jquery/dist/**',
         './node_modules/select2/dist/**',
         './node_modules/vue/dist/**',
+        './node_modules/select2-theme-bootstrap4/dist/**'
     ], { base: 'node_modules'})
     .pipe(gulp.dest(paths.vendor));
 });

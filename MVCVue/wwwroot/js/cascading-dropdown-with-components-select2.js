@@ -1,8 +1,10 @@
-var app = new Vue({
+$.fn.select2.defaults.set( "theme", "bootstrap" );
+
+const app = new Vue({
     el: '#vueApp',
     data: {
-         brandId: '',
-         modelId: ''
+        brandId: '',
+        modelId: ''
     },
     watch: { 
         brandId: function() {

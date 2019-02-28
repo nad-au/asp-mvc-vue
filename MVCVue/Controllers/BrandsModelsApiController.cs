@@ -23,24 +23,6 @@ namespace MVCVue.Controllers
             return Ok(brands);
         }
 
-        [HttpGet("select2")]
-        public async Task<IActionResult> GetAsSelect2()
-        {
-            var brands = (await GetBrandModels())
-                .GroupBy(g => g.BrandId)
-                .Select(p => p.First().ConvertTo<Brand>())
-                .OrderBy(o => o.BrandId)
-                .Select(brand => new Select2Item {Id = brand.BrandId, Text = brand.BrandName})
-                .ToArray();
-
-            var results = new Select2Results
-            {
-                Results = brands
-            };
-
-            return Ok(results);
-        }
-
         // GET api/brands/1/models
         [HttpGet("{brandId}/models")]
         public async Task<ActionResult<string>> GetModels(long brandId)
