@@ -3,10 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <StartupObject />
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <Content Remove="car-brand-model.json" />
+    <Content Remove="Views\CascadingDropdownVuex\Index.cshtml" />
     <Content Remove="Views\CascadingDropdownWithComponentsAndSelect2\Index.cshtml" />
     <Content Remove="Views\CascadingDropdownUsingReusableComponents\Index.cshtml" />
     <Content Remove="Views\CascadingDropdownUsingComponents\Index.cshtml" />
@@ -52,6 +54,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\CascadingDropdownVuex\Index.cshtml" />
     <None Include="Views\CascadingDropdownWithComponentsAndSelect2\Index.cshtml" />
     <None Include="Views\CascadingDropdownUsingReusableComponents\Index.cshtml" />
     <None Include="Views\CascadingDropdownUsingComponents\Index.cshtml" />
