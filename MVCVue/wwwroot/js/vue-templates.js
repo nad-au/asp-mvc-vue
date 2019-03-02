@@ -288,7 +288,7 @@ Vue.component('vue-select2-multiple-managed', {
             .trigger('change')
             .on('change',
                 function() {
-                    vm.$emit('input', $(this).val());
+                    vm.$emit('input', $(this).val().map(Number));
                 });
     },
     watch: {

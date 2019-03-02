@@ -35,6 +35,13 @@ namespace MVCVue.Controllers
             return Ok(programs);
         }
 
+        // GET api/brands/withModels
+        [HttpGet("withModels")]
+        public async Task<IActionResult> GetBrandsWithModels()
+        {
+            return Ok(await GetBrandModels());
+        }
+
         private async Task<IEnumerable<BrandModel>> GetBrandModels()
         {
             var json = await Utils.GetResourceContent(Utils.BrandModels);
