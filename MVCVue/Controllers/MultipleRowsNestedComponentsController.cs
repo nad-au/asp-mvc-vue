@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using MVCVue.Models;
 
 namespace MVCVue.Controllers
@@ -18,9 +20,18 @@ namespace MVCVue.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(MultipleCarModel viewModel)
+        public async Task<IActionResult> Index(MultipleCarModel viewModel)
         {
-            return RedirectToAction("Index");
+            var brandModels = await Utils.GetBrandModels();
+            var submitted = new SubmittedBrandsAndModels
+            {
+                Brands = viewModel.CarModels?.Select(cm => cm.BrandId)
+                    .Select(brandId => brandModels.FirstOrDefault(p => p.BrandId == brandId)?.BrandName),
+                Models = viewModel.CarModels?.Select(cm => cm.ModelId)
+                    .Select(modelId => brandModels.SingleOrDefault(p => p.ModelId == modelId)?.ModelName)
+            };
+
+            return View("Submitted", submitted);
         }
     }
 }

@@ -23,7 +23,7 @@ namespace MVCVue
         }
 
         private static List<BrandModel> _brandModels;
-        public static async Task<IEnumerable<BrandModel>> GetBrandModels()
+        public static async Task<List<BrandModel>> GetBrandModels()
         {
             if (_brandModels != null) return _brandModels;
 

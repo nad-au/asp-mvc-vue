@@ -9,20 +9,19 @@
     <div class="row">
         <main class="col">
             <h1>Cars</h1>
-            @using (Html.BeginForm("Index", "CascadingDropdownWithSelect2MultiSelect", FormMethod.Post))
-            {
+            <form asp-controller="CascadingDropdownWithSelect2MultiSelect" asp-action="Index" data-ajax="true" data-ajax-method="POST" data-ajax-update="#Updated">
                 <div class="form-group row">
                     @Html.LabelFor(m => m.BrandId, new { @class = "col-sm-2 col-form-label" })
                     <div class="col-sm-10">
                         <vue-select2 class="form-control"
-                                 id="@Html.IdFor(m => m.BrandId)"
-                                 name="@Html.NameFor(m => m.BrandId)"
-                                 ajax-url="/api/brands"
-                                 placeholder="Select a brand..."
-                                 initial="@Model.BrandId"
-                                 value-name="brandId"
-                                 display-name="brandName"
-                                 v-model="brandId">
+                                     id="@Html.IdFor(m => m.BrandId)"
+                                     name="@Html.NameFor(m => m.BrandId)"
+                                     ajax-url="/api/brands"
+                                     placeholder="Select a brand..."
+                                     initial="@Model.BrandId"
+                                     value-name="brandId"
+                                     display-name="brandName"
+                                     v-model="brandId">
                         </vue-select2>
                     </div>
                 </div>
@@ -31,14 +30,14 @@
                     @Html.LabelFor(m => m.ModelIds, new { @class = "col-sm-2 col-form-label" })
                     <div class="col-sm-10">
                         <vue-select2-multiple-secondary class="form-control"
-                                               id="@Html.IdFor(m => m.ModelIds)"
-                                               name="@Html.NameFor(m => m.ModelIds)"
-                                               v-bind:ajax-url="getModelsUrl"
-                                               placeholder="Select a model..."
-                                               v-bind:initial="[@Model.ModelIds.ToCsv()]"
-                                               value-name="modelId"
-                                               display-name="modelName"
-                                               v-model="modelId">
+                                                        id="@Html.IdFor(m => m.ModelIds)"
+                                                        name="@Html.NameFor(m => m.ModelIds)"
+                                                        v-bind:ajax-url="getModelsUrl"
+                                                        placeholder="Select a model..."
+                                                        v-bind:initial="[@Model.ModelIds.ToCsv()]"
+                                                        value-name="modelId"
+                                                        display-name="modelName"
+                                                        v-model="modelId">
                         </vue-select2-multiple-secondary>
                     </div>
                 </div>
@@ -50,16 +49,16 @@
 
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button class="btn btn-primary" type="submit">Save</button>
+                        <button class="btn btn-primary" type="submit">Submit</button>
                         <button v-on:click="brandId = ''" class="btn btn-warning" type="button">Clear</button>
                         @Html.ActionLink("Cancel", "Index", "Home", null, new { @class = "btn btn-secondary" })
                     </div>
                 </div>
-
-            }
+            </form>
         </main>
     </div>
 </div>
+
 @section Scripts {
     <script src="/js/vue-templates.js"></script>
     <script src="/js/cascading-dropdown-with-components-select2-multiselect.js"></script>

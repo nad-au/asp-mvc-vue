@@ -49,4 +49,11 @@ namespace MVCVue.Models
         [DisplayName("Model")]
         public IEnumerable<long> ModelIds { get; set; }
     }
+
+    public class SubmittedBrandsAndModels
+    {
+        public IEnumerable<string> Brands { get; set; }
+
+        public IEnumerable<string> Models { get; set; }
+    }
 }

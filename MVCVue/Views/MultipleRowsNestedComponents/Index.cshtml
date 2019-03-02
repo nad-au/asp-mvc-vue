@@ -8,21 +8,20 @@
     <div class="row">
         <main class="col">
             <h1>Cars</h1>
-            @using (Html.BeginForm("Index", "MultipleRowsNestedComponents", FormMethod.Post))
-            {
+            <form asp-controller="MultipleRowsNestedComponents" asp-action="Index" data-ajax="true" data-ajax-method="POST" data-ajax-update="#Updated">
                 @Html.EditorFor(m => m.CarModels)
 
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button class="btn btn-primary" type="submit">Save</button>
+                        <button class="btn btn-primary" type="submit">Submit</button>
                         @Html.ActionLink("Cancel", "Index", "Home", null, new { @class = "btn btn-secondary" })
                     </div>
                 </div>
-
-            }
+            </form>
         </main>
     </div>
 </div>
+
 @section Scripts {
     <script src="/js/vue-templates.js"></script>
     <script src="/js/multiple-rows-nested-components.js"></script>

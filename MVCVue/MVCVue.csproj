@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <StartupObject />
   </PropertyGroup>
 
@@ -11,6 +11,7 @@
     <Content Remove="Views\CascadingDropdownUsingReusableComponents\Index.cshtml" />
     <Content Remove="Views\CascadingDropdownUsingComponents\Index.cshtml" />
     <Content Remove="Views\CascadingDropdownWithSelect2MultiSelectManaged\Index.cshtml" />
+    <Content Remove="Views\CascadingDropdownWithSelect2MultiSelectManaged\_Updated.cshtml" />
     <Content Remove="Views\CascadingDropdownWithSelect2MultiSelect\Index.cshtml" />
     <Content Remove="Views\CascadingDropdown\Index.cshtml" />
     <Content Remove="Views\Home\Index.cshtml" />
@@ -32,8 +33,9 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.2" />
     <PackageReference Include="servicestack.text.core" Version="5.4.1" />
   </ItemGroup>
 
@@ -53,6 +55,7 @@
     <None Include="Views\CascadingDropdownWithComponentsAndSelect2\Index.cshtml" />
     <None Include="Views\CascadingDropdownUsingReusableComponents\Index.cshtml" />
     <None Include="Views\CascadingDropdownUsingComponents\Index.cshtml" />
+    <None Include="Views\Shared\Submitted.cshtml" />
     <None Include="Views\CascadingDropdownWithSelect2MultiSelectManaged\Index.cshtml" />
     <None Include="Views\CascadingDropdownWithSelect2MultiSelect\Index.cshtml" />
     <None Include="Views\CascadingDropdown\Index.cshtml" />
