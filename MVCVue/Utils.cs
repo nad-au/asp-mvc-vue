@@ -1,6 +1,9 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
+using MVCVue.Models;
+using ServiceStack;
 
 namespace MVCVue
 {
@@ -17,6 +20,16 @@ namespace MVCVue
             {
                 return await reader.ReadToEndAsync();
             }
+        }
+
+        private static List<BrandModel> _brandModels;
+        public static async Task<IEnumerable<BrandModel>> GetBrandModels()
+        {
+            if (_brandModels != null) return _brandModels;
+
+            var json = await GetResourceContent(BrandModels);
+            _brandModels = json.FromJson<List<BrandModel>>();
+            return _brandModels;
         }
     }
 }

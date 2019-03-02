@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MVCVue.Models;
@@ -15,7 +14,7 @@ namespace MVCVue.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var brands = (await GetBrandModels())
+            var brands = (await Utils.GetBrandModels())
                 .GroupBy(g => g.BrandId)
                 .Select(p => p.First().ConvertTo<Brand>())
                 .OrderBy(o => o.BrandId);
@@ -27,7 +26,7 @@ namespace MVCVue.Controllers
         [HttpGet("{brandId}/models")]
         public async Task<ActionResult<string>> GetModels(long brandId)
         {
-            var programs = (await GetBrandModels())
+            var programs = (await Utils.GetBrandModels())
                 .Where(p => p.BrandId == brandId)
                 .Select(p => p.ConvertTo<Model>())
                 .OrderBy(p => p.ModelId);
@@ -39,13 +38,7 @@ namespace MVCVue.Controllers
         [HttpGet("withModels")]
         public async Task<IActionResult> GetBrandsWithModels()
         {
-            return Ok(await GetBrandModels());
-        }
-
-        private async Task<IEnumerable<BrandModel>> GetBrandModels()
-        {
-            var json = await Utils.GetResourceContent(Utils.BrandModels);
-            return json.FromJson<List<BrandModel>>();
+            return Ok(await Utils.GetBrandModels());
         }
     }
 }
