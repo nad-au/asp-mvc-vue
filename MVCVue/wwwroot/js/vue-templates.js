@@ -1,5 +1,4 @@
 const ax = axios;
-Vue.use(Vuex);
 
 Vue.component('vue-ajax-dropdown', {
     props: ['value', 'initial', 'ajaxUrl', 'placeholder', 'valueName', 'displayName'],
@@ -289,7 +288,7 @@ Vue.component('vue-select2-multiple-managed', {
             .trigger('change')
             .on('change',
                 function() {
-                    vm.$emit('input', $(this).val().map(Number));
+                    vm.$emit('input', vm.getSelectedValues());
                 });
     },
     watch: {
@@ -298,10 +297,9 @@ Vue.component('vue-select2-multiple-managed', {
                 $(this.$el).val(value).trigger('change');
         },
         dataSource: function(dataSource) {
-            const select2 = $(this.$el);
-            const lastSelected = select2.val().map(Number);
+            const lastSelected = this.getSelectedValues();
 
-            select2
+            $(this.$el)
                 .empty()
                 .select2({
                     placeholder: this.placeholder,
@@ -321,53 +319,10 @@ Vue.component('vue-select2-multiple-managed', {
     destroyed: function () {
         $(this.$el).off().select2('destroy');
     },
-    template: `
-        <select multiple="multiple">
-        </select>
-    `
-});
-
-Vue.component('vue-select2-multiple-vuex', {
-    props: ['value', 'initial', 'placeholder', 'dataSource', 'mutation'],
-    mounted: function() {
-        const vm = this;
-        $(this.$el)
-            .select2({
-                placeholder: this.placeholder,
-                allowClear: true,
-                data: this.dataSource
-            })
-            .val(this.value)
-            .trigger('change')
-            .on('change',
-                function() {
-                    const v = $(this).val().map(Number);
-                    vm.$emit('input', v);
-                    vm.$store.commit(vm.mutation);
-                });
-    },
-    watch: {
-        value: function(value) {
-            if ([...value].sort().join(",") !== [...$(this.$el).val()].sort().join(","))
-                $(this.$el).val(value).trigger('change');
-        },
-        dataSource: function(dataSource) {
-            $(this.$el).empty().select2({
-                    placeholder: this.placeholder,
-                    allowClear: true,
-                    data: dataSource
-                })
-                .val('')
-                .trigger('change');
-
-            if (!this.initialValueSet) {
-                this.$emit('input', this.initial);
-                this.initialValueSet = true;
-            }
+    methods: {
+        getSelectedValues() {
+            return $(this.$el).val().map(Number);
         }
-    },
-    destroyed: function () {
-        $(this.$el).off().select2('destroy');
     },
     template: `
         <select multiple="multiple">
