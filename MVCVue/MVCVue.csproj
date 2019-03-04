@@ -20,6 +20,7 @@
     <Content Remove="Views\MultipleRowsNestedComponents\Index.cshtml" />
     <Content Remove="Views\MultipleRows\EditorTemplates\CarModel.cshtml" />
     <Content Remove="Views\MultipleRows\Index.cshtml" />
+    <Content Remove="Views\Select2WithOptions\Index.cshtml" />
     <Content Remove="Views\SimpleDropdownUsingComponents\Index.cshtml" />
     <Content Remove="Views\SimpleDropdown\Index.cshtml" />
   </ItemGroup>
@@ -56,6 +57,7 @@
     <None Include="Views\CascadingDropdownWithComponentsAndSelect2\Index.cshtml" />
     <None Include="Views\CascadingDropdownUsingReusableComponents\Index.cshtml" />
     <None Include="Views\CascadingDropdownUsingComponents\Index.cshtml" />
+    <None Include="Views\Select2WithOptions\Index.cshtml" />
     <None Include="Views\Shared\Submitted.cshtml" />
     <None Include="Views\CascadingDropdownWithSelect2MultiSelectManaged\Index.cshtml" />
     <None Include="Views\CascadingDropdownWithSelect2MultiSelect\Index.cshtml" />

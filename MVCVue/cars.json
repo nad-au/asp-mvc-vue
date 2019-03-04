@@ -2,440 +2,548 @@
   {
     "BrandId": 1,
     "BrandName": "BMW",
+    "Current": true,
     "Models": [
       {
         "ModelId": 1,
-        "ModelName": "i3"
+        "ModelName": "i3",
+        "Current": true
       },
       {
         "ModelId": 2,
-        "ModelName": "1-Series"
+        "ModelName": "1-Series",
+        "Current": true
       },
       {
         "ModelId": 3,
-        "ModelName": "2-Series"
+        "ModelName": "2-Series",
+        "Current": true
       },
       {
         "ModelId": 4,
-        "ModelName": "3-Series"
+        "ModelName": "3-Series",
+        "Current": true
       },
       {
         "ModelId": 5,
-        "ModelName": "3-Series, M3"
+        "ModelName": "3-Series, M3",
+        "Current": true
       },
       {
         "ModelId": 6,
-        "ModelName": "4-Series, M4"
+        "ModelName": "4-Series, M4",
+        "Current": true
       },
       {
         "ModelId": 7,
-        "ModelName": "3-Series GT"
+        "ModelName": "3-Series GT",
+        "Current": true
       },
       {
         "ModelId": 8,
-        "ModelName": "5-Series"
+        "ModelName": "5-Series",
+        "Current": true
       },
       {
         "ModelId": 9,
-        "ModelName": "5-Series, M5"
+        "ModelName": "5-Series, M5",
+        "Current": true
       },
       {
         "ModelId": 10,
-        "ModelName": "5-Series GT"
+        "ModelName": "5-Series GT",
+        "Current": true
       },
       {
         "ModelId": 11,
-        "ModelName": "6-Series GT"
+        "ModelName": "6-Series GT",
+        "Current": true
       },
       {
         "ModelId": 12,
-        "ModelName": "6-Series, M6"
+        "ModelName": "6-Series, M6",
+        "Current": true
       },
       {
         "ModelId": 13,
-        "ModelName": "8-Series"
+        "ModelName": "8-Series",
+        "Current": true
       },
       {
         "ModelId": 14,
-        "ModelName": "7-Series"
+        "ModelName": "7-Series",
+        "Current": true
       },
       {
         "ModelId": 15,
-        "ModelName": "Z1"
+        "ModelName": "Z1",
+        "Current": true
       },
       {
         "ModelId": 16,
-        "ModelName": "Z3, M"
+        "ModelName": "Z3, M",
+        "Current": true
       },
       {
         "ModelId": 17,
-        "ModelName": "Z4"
+        "ModelName": "Z4",
+        "Current": true
       },
       {
         "ModelId": 18,
-        "ModelName": "M1"
+        "ModelName": "M1",
+        "Current": true
       },
       {
         "ModelId": 19,
-        "ModelName": "Z8"
+        "ModelName": "Z8",
+        "Current": true
       },
       {
         "ModelId": 20,
-        "ModelName": "i8"
+        "ModelName": "i8",
+        "Current": true
       },
       {
         "ModelId": 21,
-        "ModelName": "X1"
+        "ModelName": "2000 C",
+        "Current": false
       },
       {
         "ModelId": 22,
-        "ModelName": "X3"
+        "ModelName": "2000 CS",
+        "Current": false
       },
       {
         "ModelId": 23,
-        "ModelName": "X4"
+        "ModelName": "501",
+        "Current": false
       },
       {
         "ModelId": 24,
-        "ModelName": "X4"
+        "ModelName": "502",
+        "Current": false
       },
       {
         "ModelId": 25,
-        "ModelName": "X5"
+        "ModelName": "600",
+        "Current": false
       },
       {
         "ModelId": 26,
-        "ModelName": "X6"
+        "ModelName": "700",
+        "Current": false
       },
       {
         "ModelId": 27,
-        "ModelName": "X7"
+        "ModelName": "New Six",
+        "Current": false
       }
     ]
   },
   {
     "BrandId": 2,
     "BrandName": "Cadillac",
+    "Current": true,
     "Models": [
       {
         "ModelId": 28,
-        "ModelName": "Cimarron"
+        "ModelName": "Cimarron",
+        "Current": false
       },
       {
         "ModelId": 29,
-        "ModelName": "BLS"
+        "ModelName": "BLS",
+        "Current": false
       },
       {
         "ModelId": 30,
-        "ModelName": "ATS"
+        "ModelName": "ATS",
+        "Current": true
       },
       {
         "ModelId": 31,
-        "ModelName": "ELR"
+        "ModelName": "ELR",
+        "Current": false
       },
       {
         "ModelId": 32,
-        "ModelName": "Catera"
+        "ModelName": "Catera",
+        "Current": false
       },
       {
         "ModelId": 33,
-        "ModelName": "CTS"
+        "ModelName": "CTS",
+        "Current": true
       },
       {
         "ModelId": 34,
-        "ModelName": "Series 60"
+        "ModelName": "Series 60",
+        "Current": false
       },
       {
         "ModelId": 35,
-        "ModelName": "Series 61"
+        "ModelName": "Series 61",
+        "Current": false
       },
       {
         "ModelId": 36,
-        "ModelName": "Series 65"
+        "ModelName": "Series 65",
+        "Current": false
       },
       {
         "ModelId": 37,
-        "ModelName": "Series 62"
+        "ModelName": "Series 62",
+        "Current": false
       },
       {
         "ModelId": 38,
-        "ModelName": "6200"
+        "ModelName": "6200",
+        "Current": false
       },
       {
         "ModelId": 39,
-        "ModelName": "Calais"
+        "ModelName": "Calais",
+        "Current": false
       },
       {
         "ModelId": 40,
-        "ModelName": "Seville"
+        "ModelName": "Seville",
+        "Current": false
       },
       {
         "ModelId": 41,
-        "ModelName": "STS"
+        "ModelName": "STS",
+        "Current": false
       },
       {
         "ModelId": 42,
-        "ModelName": "Sedan de Ville"
+        "ModelName": "Sedan de Ville",
+        "Current": false
       },
       {
         "ModelId": 43,
-        "ModelName": "DTS"
+        "ModelName": "DTS",
+        "Current": false
       },
       {
         "ModelId": 44,
-        "ModelName": "XTS"
+        "ModelName": "XTS",
+        "Current": true
       },
       {
         "ModelId": 45,
-        "ModelName": "CT6"
+        "ModelName": "CT6",
+        "Current": true
       },
       {
         "ModelId": 46,
-        "ModelName": "Coupe de Ville"
+        "ModelName": "Coupe de Ville",
+        "Current": false
       },
       {
         "ModelId": 47,
-        "ModelName": "Brougham"
+        "ModelName": "Brougham",
+        "Current": false
       },
       {
         "ModelId": 48,
-        "ModelName": "Fleetwood"
+        "ModelName": "Fleetwood",
+        "Current": false
       },
       {
         "ModelId": 49,
-        "ModelName": "Series 75"
+        "ModelName": "Series 75",
+        "Current": false
       },
       {
         "ModelId": 50,
-        "ModelName": "Eldorado"
+        "ModelName": "Eldorado",
+        "Current": false
       },
       {
         "ModelId": 51,
-        "ModelName": "XT4"
+        "ModelName": "XT4",
+        "Current": true
       },
       {
         "ModelId": 52,
-        "ModelName": "SRX"
+        "ModelName": "SRX",
+        "Current": false
       },
       {
         "ModelId": 53,
-        "ModelName": "XT5"
+        "ModelName": "XT5",
+        "Current": true
       },
       {
         "ModelId": 54,
-        "ModelName": "Escalade"
+        "ModelName": "Escalade",
+        "Current": true
       },
       {
         "ModelId": 55,
-        "ModelName": "Allanté"
+        "ModelName": "Allanté",
+        "Current": false
       },
       {
         "ModelId": 56,
-        "ModelName": "XLR"
+        "ModelName": "XLR",
+        "Current": false
       }
     ]
   },
   {
     "BrandId": 3,
     "BrandName": "Kia",
+    "Current": true,
     "Models": [
       {
         "ModelId": 57,
-        "ModelName": "Picanto"
+        "ModelName": "Picanto",
+        "Current": true
       },
       {
         "ModelId": 58,
-        "ModelName": "Pride"
+        "ModelName": "Pride",
+        "Current": true
       },
       {
         "ModelId": 59,
-        "ModelName": "Rio"
+        "ModelName": "Rio",
+        "Current": true
       },
       {
         "ModelId": 60,
-        "ModelName": "Soul"
+        "ModelName": "Soul",
+        "Current": true
       },
       {
         "ModelId": 61,
-        "ModelName": "Avella"
+        "ModelName": "Avella",
+        "Current": false
       },
       {
         "ModelId": 62,
-        "ModelName": "Cee'd"
+        "ModelName": "Cee'd",
+        "Current": true
       },
       {
         "ModelId": 63,
-        "ModelName": "Sephia"
+        "ModelName": "Sephia",
+        "Current": false
       },
       {
         "ModelId": 64,
-        "ModelName": "Cerato"
+        "ModelName": "Cerato",
+        "Current": true
       },
       {
         "ModelId": 65,
-        "ModelName": "Forte"
+        "ModelName": "Forte",
+        "Current": true
       },
       {
         "ModelId": 66,
-        "ModelName": "Shuma"
+        "ModelName": "Shuma",
+        "Current": false
       },
       {
         "ModelId": 67,
-        "ModelName": "Concord"
+        "ModelName": "Concord",
+        "Current": false
       },
       {
         "ModelId": 68,
-        "ModelName": "Clarus"
+        "ModelName": "Clarus",
+        "Current": false
       },
       {
         "ModelId": 69,
-        "ModelName": "Magentis"
+        "ModelName": "Magentis",
+        "Current": true
       },
       {
         "ModelId": 70,
-        "ModelName": "Stinger"
+        "ModelName": "Stinger",
+        "Current": true
       },
       {
         "ModelId": 71,
-        "ModelName": "Potentia"
+        "ModelName": "Potentia",
+        "Current": false
       },
       {
         "ModelId": 72,
-        "ModelName": "Enterprise"
+        "ModelName": "Enterprise",
+        "Current": false
       },
       {
         "ModelId": 73,
-        "ModelName": "Opirus"
+        "ModelName": "Opirus",
+        "Current": false
       },
       {
         "ModelId": 74,
-        "ModelName": "Cadenza"
+        "ModelName": "Cadenza",
+        "Current": true
       },
       {
         "ModelId": 75,
-        "ModelName": "Quoris"
+        "ModelName": "Quoris",
+        "Current": true
       },
       {
         "ModelId": 76,
-        "ModelName": "Elan"
+        "ModelName": "Elan",
+        "Current": false
       },
       {
         "ModelId": 77,
-        "ModelName": "Venga"
+        "ModelName": "Venga",
+        "Current": false
       },
       {
         "ModelId": 78,
-        "ModelName": "Carens"
+        "ModelName": "Carens",
+        "Current": true
       },
       {
         "ModelId": 79,
-        "ModelName": "Joice"
+        "ModelName": "Joice",
+        "Current": false
       },
       {
         "ModelId": 80,
-        "ModelName": "Carnival"
+        "ModelName": "Carnival",
+        "Current": true
       },
       {
         "ModelId": 81,
-        "ModelName": "Retona"
+        "ModelName": "Retona",
+        "Current": false
       },
       {
         "ModelId": 82,
-        "ModelName": "Stonic"
+        "ModelName": "Stonic",
+        "Current": true
       },
       {
         "ModelId": 83,
-        "ModelName": "Niro"
+        "ModelName": "Niro",
+        "Current": false
       },
       {
         "ModelId": 84,
-        "ModelName": "Sportage"
+        "ModelName": "Sportage",
+        "Current": true
       },
       {
         "ModelId": 85,
-        "ModelName": "Sorento"
+        "ModelName": "Sorento",
+        "Current": true
       },
       {
         "ModelId": 86,
-        "ModelName": "Mohave"
+        "ModelName": "Mohave",
+        "Current": true
       },
       {
         "ModelId": 87,
-        "ModelName": "Bongo"
+        "ModelName": "Bongo",
+        "Current": false
       },
       {
         "ModelId": 88,
-        "ModelName": "Bongo Frontier"
+        "ModelName": "Bongo Frontier",
+        "Current": false
       }
     ]
   },
   {
     "BrandId": 4,
     "BrandName": "Volkswagen",
+    "Current": true,
     "Models": [
       {
         "ModelId": 89,
-        "ModelName": "Fusca"
+        "ModelName": "Fusca",
+        "Current": false
       },
       {
         "ModelId": 90,
-        "ModelName": "Gol"
+        "ModelName": "Gol",
+        "Current": true
       },
       {
         "ModelId": 91,
-        "ModelName": "Voyage"
+        "ModelName": "Voyage",
+        "Current": false
       },
       {
         "ModelId": 92,
-        "ModelName": "Parati"
+        "ModelName": "Parati",
+        "Current": false
       },
       {
         "ModelId": 93,
-        "ModelName": "Fox"
+        "ModelName": "Fox",
+        "Current": true
       },
       {
         "ModelId": 94,
-        "ModelName": "Brasilia"
+        "ModelName": "Brasilia",
+        "Current": false
       },
       {
         "ModelId": 95,
-        "ModelName": "Apollo"
+        "ModelName": "Apollo",
+        "Current": false
       },
       {
         "ModelId": 96,
-        "ModelName": "Logus"
+        "ModelName": "Logus",
+        "Current": false
       },
       {
         "ModelId": 97,
-        "ModelName": "Pointer"
+        "ModelName": "Pointer",
+        "Current": false
       },
       {
         "ModelId": 98,
-        "ModelName": "Santana"
+        "ModelName": "Santana",
+        "Current": true
       },
       {
         "ModelId": 99,
-        "ModelName": "Quantum"
+        "ModelName": "Quantum",
+        "Current": false
       },
       {
         "ModelId": 100,
-        "ModelName": "SpaceFox"
+        "ModelName": "SpaceFox",
+        "Current": false
       },
       {
         "ModelId": 101,
-        "ModelName": "SP2"
+        "ModelName": "SP2",
+        "Current": false
       },
       {
         "ModelId": 102,
-        "ModelName": "Saveiro"
+        "ModelName": "Saveiro",
+        "Current": false
       },
       {
         "ModelId": 103,
-        "ModelName": "Golf"
+        "ModelName": "Golf",
+        "Current": true
       },
       {
         "ModelId": 104,
-        "ModelName": "Passat"
+        "ModelName": "Passat",
+        "Current": true
       }
     ]
   }

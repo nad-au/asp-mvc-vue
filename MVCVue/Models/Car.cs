@@ -6,6 +6,7 @@ namespace MVCVue.Models
     {
         public long BrandId { get; set; }
         public string BrandName { get; set; }
+        public bool Current { get; set; }
 
         public List<Model> Models { get; set; }
     }
@@ -14,5 +15,6 @@ namespace MVCVue.Models
     {
         public long ModelId { get; set; }
         public string ModelName { get; set; }
+        public bool Current { get; set; }
     }
 }
