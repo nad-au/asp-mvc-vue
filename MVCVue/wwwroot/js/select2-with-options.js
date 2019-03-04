@@ -7,7 +7,8 @@ const app = new Vue({
         brands: [],
         selectedBrandIds: [],
         models: [],
-        selectedModelIds: []
+        selectedModelIds: [],
+        isValidationEnabled: false
     },
     created: function() {
         ax.get('/api/cars')
@@ -17,8 +18,10 @@ const app = new Vue({
             })
             .catch(e => { this.errors.push(e); });
     },
-    watch: { 
+    watch: {
         selectedBrandIds: function(ids, oldIds) {
+            this.isValidationEnabled = false;
+
             if (ids === undefined || ids === null || ids.length === 0) {
                 this.models = [];
                 this.selectedModelIds = [];
@@ -26,14 +29,35 @@ const app = new Vue({
             }
 
             // Return if new & old values are same
-            if ((ids.length === oldIds.length) && ids.every(function(element, index) {
-                return element === oldIds[index]; 
-            })) return ;
+            if ((ids.length === oldIds.length) &&
+                ids.every(function(element, index) {
+                    return element === oldIds[index];
+                })) return;
 
             this.models = this.getAvailableModels(ids);
+        },
+        selectedModelIds: function() {
+            this.isValidationEnabled = false;
+        }
+    },
+    computed: {
+        isValidForm: function() {
+            return this.hasSelectedBrand && this.hasSelectedModel;
+        },
+        hasSelectedBrand: function() {
+            return !this.isValidationEnabled || this.selectedBrandIds.length > 0;
+        },
+        hasSelectedModel: function() {
+            return !this.isValidationEnabled || this.selectedModelIds.length > 0;
         }
     },
     methods: {
+        beforeSubmit(e) {
+            this.isValidationEnabled = true;
+            if (!this.isValidForm) {
+                e.preventDefault();
+            }
+        },
         getAllBrands() {
             let allBrands = [];
             allBrands = allBrands
@@ -79,7 +103,7 @@ const app = new Vue({
             return allAvailableModels;
         },
         getAvailableCurrentModels(selectedBrandIds) {
-            var availableCurrentModels = [];
+            let availableCurrentModels = [];
             this.cars
                 .filter(car => selectedBrandIds.includes(car.brandId))
                 .forEach(car => {
@@ -101,7 +125,7 @@ const app = new Vue({
             };
         },
         getAvailablePreviousModels(selectedBrandIds) {
-            var availablePreviousModels = [];
+            let availablePreviousModels = [];
             this.cars
                 .filter(car => selectedBrandIds.includes(car.brandId))
                 .forEach(car => {
@@ -153,8 +177,8 @@ const app = new Vue({
             this.selectedModelIds = [];
         },
         textSort(selectItem1, selectItem2) {
-            var upperItem1 = selectItem1.text.toUpperCase(),
-                upperItem2 = selectItem2.text.toUpperCase();
+            const upperItem1 = selectItem1.text.toUpperCase();
+            const upperItem2 = selectItem2.text.toUpperCase();
             if (upperItem1 > upperItem2) {
                 return 1;
             }
