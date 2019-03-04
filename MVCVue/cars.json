@@ -546,5 +546,42 @@
         "Current": true
       }
     ]
+  },
+  {
+    "BrandId": 5,
+    "BrandName": "Daimler",
+    "Current": false,
+    "Models": [
+      {
+        "ModelId": 105,
+        "ModelName": "Six",
+        "Current": false
+      },
+      {
+        "ModelId": 106,
+        "ModelName": "Double Six",
+        "Current": false
+      },
+      {
+        "ModelId": 107,
+        "ModelName": "Century Six",
+        "Current": false
+      },
+      {
+        "ModelId": 108,
+        "ModelName": "Century Double Six",
+        "Current": false
+      },
+      {
+        "ModelId": 109,
+        "ModelName": "Eight",
+        "Current": false
+      },
+      {
+        "ModelId": 110,
+        "ModelName": "Super V8",
+        "Current": false
+      }
+    ]
   }
 ]
