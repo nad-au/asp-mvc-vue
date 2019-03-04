@@ -3,23 +3,17 @@ $.fn.select2.defaults.set( "theme", "bootstrap" );
 const app = new Vue({
     el: '#vueApp',
     data: {
-        brandModels: [],
+        cars: [],
         brands: [],
         selectedBrandIds: [],
         models: [],
         selectedModelIds: []
     },
     created: function() {
-        ax.get('/api/brands/withModels')
+        ax.get('/api/cars')
             .then(response => {
-                this.brandModels = response.data;
-                this.brands = Array.from(new Set(this.brandModels.map(bm => bm.brandId)))
-                    .map(id => {
-                        return {
-                            id: id,
-                            text: this.brandModels.find(d => d.brandId === id).brandName
-                        };
-                    });
+                this.cars = response.data;
+                this.brands = this.getAllBrands();
             })
             .catch(e => { this.errors.push(e); });
     },
@@ -36,14 +30,33 @@ const app = new Vue({
                 return element === oldIds[index]; 
             })) return ;
 
-            this.models = this.brandModels
-                .filter(bm => ids.includes(bm.brandId))
-                .map(bm => {
-                    return {
-                        id: bm.modelId,
-                        text: bm.modelName
-                    };
+            this.models = this.getAvailableModels(ids);
+        }
+    },
+    methods: {
+        getAllBrands() {
+            return this.cars.map(car => {
+                return {
+                    id: car.brandId,
+                    text: car.brandName
+                };
+            });
+        },
+        getAvailableModels(selectedBrandIds) {
+            var availableModels = [];
+            this.cars
+                .filter(car => selectedBrandIds.includes(car.brandId))
+                .forEach(car => {
+                    availableModels = availableModels.concat(
+                        car.models.map(model => {
+                            return {
+                                id: model.modelId,
+                                text: model.modelName
+                            };
+                        }));
                 });
+
+            return  availableModels;
         }
     }
 });

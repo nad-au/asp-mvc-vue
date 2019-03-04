@@ -22,13 +22,13 @@ namespace MVCVue.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(MultipleCarModel viewModel)
         {
-            var brandModels = await Utils.GetBrandModels();
+            var cars = await Utils.GetCars();
             var submitted = new SubmittedBrandsAndModels
             {
                 Brands = viewModel.CarModels?.Select(cm => cm.BrandId)
-                    .Select(brandId => brandModels.FirstOrDefault(p => p.BrandId == brandId)?.BrandName),
+                    .Select(brandId => cars.FirstOrDefault(p => p.BrandId == brandId)?.BrandName),
                 Models = viewModel.CarModels?.Select(cm => cm.ModelId)
-                    .Select(modelId => brandModels.SingleOrDefault(p => p.ModelId == modelId)?.ModelName)
+                    .Select(modelId => cars.SelectMany(p => p.Models).SingleOrDefault(p => p.ModelId == modelId)?.ModelName)
             };
 
             return View("Submitted", submitted);

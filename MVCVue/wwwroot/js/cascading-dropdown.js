@@ -12,13 +12,13 @@ var app = new Vue({
         brandChanged: function () {
             this.selectedModelId = '';
             this.models = [];
-            ax.get(`/api/brands/${this.selectedBrandId}/models`)
+            ax.get(`/api/cars/${this.selectedBrandId}/models`)
                 .then(response => { this.models = response.data; })
                 .catch(e => { this.errors.push(e); });
         }
     },
     created() {
-        ax.get(`/api/brands`)
+        ax.get(`/api/cars`)
             .then(response => { this.brands = response.data; })
             .catch(e => { this.errors.push(e); });
     }

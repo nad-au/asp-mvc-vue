@@ -17,7 +17,7 @@ var app = new Vue({
                 return '';
             }
 
-            return `/api/brands/${this.brandId}/models`;
+            return `/api/cars/${this.brandId}/models`;
         }
     }
 });

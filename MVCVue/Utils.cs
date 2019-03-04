@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using MVCVue.Models;
@@ -9,7 +10,7 @@ namespace MVCVue
 {
     public static class Utils
     {
-        public static string BrandModels = $"{nameof(MVCVue)}.car-brand-model.json";
+        public static string CarsJson = $"{nameof(MVCVue)}.cars.json";
 
         public static async Task<string> GetResourceContent(string resourceName)
         {
@@ -22,14 +23,15 @@ namespace MVCVue
             }
         }
 
-        private static List<BrandModel> _brandModels;
-        public static async Task<List<BrandModel>> GetBrandModels()
+        private static List<Car> _cars;
+        public static async Task<List<Car>> GetCars()
         {
-            if (_brandModels != null) return _brandModels;
+            if (_cars != null) return _cars;
 
-            var json = await GetResourceContent(BrandModels);
-            _brandModels = json.FromJson<List<BrandModel>>();
-            return _brandModels;
+            var json = await GetResourceContent(CarsJson);
+            _cars = json.FromJson<List<Car>>();
+
+            return _cars;
         }
     }
 }

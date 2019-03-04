@@ -9,7 +9,7 @@ Vue.component('brand-select', {
         };
     },
     created() {
-        ax.get(`/api/brands`)
+        ax.get(`/api/cars`)
             .then(response => { this.brands = response.data; })
             .catch(e => { this.errors.push(e); });
     },
@@ -44,7 +44,7 @@ Vue.component('model-select', {
             }
 
             this.brandUpdated = true;
-            ax.get(`/api/brands/${brand}/models`)
+            ax.get(`/api/cars/${brand}/models`)
                 .then(response => { this.models = response.data; })
                 .catch(e => { this.errors.push(e); });
         }

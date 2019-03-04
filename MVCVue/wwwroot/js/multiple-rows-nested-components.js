@@ -25,7 +25,7 @@ for (const vueApp of vueApps) {
                     return '';
                 }
 
-                return `/api/brands/${this.brandId}/models`;
+                return `/api/cars/${this.brandId}/models`;
             }
         }
     });

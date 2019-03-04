@@ -16,16 +16,16 @@ namespace MVCVue.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(CarModel viewModel)
         {
-            var brandModels = await Utils.GetBrandModels();
+            var cars = await Utils.GetCars();
             var submitted = new SubmittedBrandsAndModels
             {
                 Brands = viewModel.BrandId > 0 ? new List<string>
                 {
-                    brandModels.First(p => p.BrandId == viewModel.BrandId).BrandName
+                    cars.First(p => p.BrandId == viewModel.BrandId).BrandName
                 } : null,
                 Models = viewModel.ModelId > 0 ? new List<string>
                 {
-                    brandModels.First(p => p.ModelId == viewModel.ModelId).ModelName
+                    cars.SelectMany(p => p.Models).First(p => p.ModelId == viewModel.ModelId).ModelName
                 } : null
             };
 

@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="car-brand-model.json" />
+    <Content Remove="cars.json" />
     <Content Remove="Views\CascadingDropdownWithComponentsAndSelect2\Index.cshtml" />
     <Content Remove="Views\CascadingDropdownUsingReusableComponents\Index.cshtml" />
     <Content Remove="Views\CascadingDropdownUsingComponents\Index.cshtml" />
@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="car-brand-model.json" />
+    <EmbeddedResource Include="cars.json" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,442 @@
+﻿[
+  {
+    "BrandId": 1,
+    "BrandName": "BMW",
+    "Models": [
+      {
+        "ModelId": 1,
+        "ModelName": "i3"
+      },
+      {
+        "ModelId": 2,
+        "ModelName": "1-Series"
+      },
+      {
+        "ModelId": 3,
+        "ModelName": "2-Series"
+      },
+      {
+        "ModelId": 4,
+        "ModelName": "3-Series"
+      },
+      {
+        "ModelId": 5,
+        "ModelName": "3-Series, M3"
+      },
+      {
+        "ModelId": 6,
+        "ModelName": "4-Series, M4"
+      },
+      {
+        "ModelId": 7,
+        "ModelName": "3-Series GT"
+      },
+      {
+        "ModelId": 8,
+        "ModelName": "5-Series"
+      },
+      {
+        "ModelId": 9,
+        "ModelName": "5-Series, M5"
+      },
+      {
+        "ModelId": 10,
+        "ModelName": "5-Series GT"
+      },
+      {
+        "ModelId": 11,
+        "ModelName": "6-Series GT"
+      },
+      {
+        "ModelId": 12,
+        "ModelName": "6-Series, M6"
+      },
+      {
+        "ModelId": 13,
+        "ModelName": "8-Series"
+      },
+      {
+        "ModelId": 14,
+        "ModelName": "7-Series"
+      },
+      {
+        "ModelId": 15,
+        "ModelName": "Z1"
+      },
+      {
+        "ModelId": 16,
+        "ModelName": "Z3, M"
+      },
+      {
+        "ModelId": 17,
+        "ModelName": "Z4"
+      },
+      {
+        "ModelId": 18,
+        "ModelName": "M1"
+      },
+      {
+        "ModelId": 19,
+        "ModelName": "Z8"
+      },
+      {
+        "ModelId": 20,
+        "ModelName": "i8"
+      },
+      {
+        "ModelId": 21,
+        "ModelName": "X1"
+      },
+      {
+        "ModelId": 22,
+        "ModelName": "X3"
+      },
+      {
+        "ModelId": 23,
+        "ModelName": "X4"
+      },
+      {
+        "ModelId": 24,
+        "ModelName": "X4"
+      },
+      {
+        "ModelId": 25,
+        "ModelName": "X5"
+      },
+      {
+        "ModelId": 26,
+        "ModelName": "X6"
+      },
+      {
+        "ModelId": 27,
+        "ModelName": "X7"
+      }
+    ]
+  },
+  {
+    "BrandId": 2,
+    "BrandName": "Cadillac",
+    "Models": [
+      {
+        "ModelId": 28,
+        "ModelName": "Cimarron"
+      },
+      {
+        "ModelId": 29,
+        "ModelName": "BLS"
+      },
+      {
+        "ModelId": 30,
+        "ModelName": "ATS"
+      },
+      {
+        "ModelId": 31,
+        "ModelName": "ELR"
+      },
+      {
+        "ModelId": 32,
+        "ModelName": "Catera"
+      },
+      {
+        "ModelId": 33,
+        "ModelName": "CTS"
+      },
+      {
+        "ModelId": 34,
+        "ModelName": "Series 60"
+      },
+      {
+        "ModelId": 35,
+        "ModelName": "Series 61"
+      },
+      {
+        "ModelId": 36,
+        "ModelName": "Series 65"
+      },
+      {
+        "ModelId": 37,
+        "ModelName": "Series 62"
+      },
+      {
+        "ModelId": 38,
+        "ModelName": "6200"
+      },
+      {
+        "ModelId": 39,
+        "ModelName": "Calais"
+      },
+      {
+        "ModelId": 40,
+        "ModelName": "Seville"
+      },
+      {
+        "ModelId": 41,
+        "ModelName": "STS"
+      },
+      {
+        "ModelId": 42,
+        "ModelName": "Sedan de Ville"
+      },
+      {
+        "ModelId": 43,
+        "ModelName": "DTS"
+      },
+      {
+        "ModelId": 44,
+        "ModelName": "XTS"
+      },
+      {
+        "ModelId": 45,
+        "ModelName": "CT6"
+      },
+      {
+        "ModelId": 46,
+        "ModelName": "Coupe de Ville"
+      },
+      {
+        "ModelId": 47,
+        "ModelName": "Brougham"
+      },
+      {
+        "ModelId": 48,
+        "ModelName": "Fleetwood"
+      },
+      {
+        "ModelId": 49,
+        "ModelName": "Series 75"
+      },
+      {
+        "ModelId": 50,
+        "ModelName": "Eldorado"
+      },
+      {
+        "ModelId": 51,
+        "ModelName": "XT4"
+      },
+      {
+        "ModelId": 52,
+        "ModelName": "SRX"
+      },
+      {
+        "ModelId": 53,
+        "ModelName": "XT5"
+      },
+      {
+        "ModelId": 54,
+        "ModelName": "Escalade"
+      },
+      {
+        "ModelId": 55,
+        "ModelName": "Allanté"
+      },
+      {
+        "ModelId": 56,
+        "ModelName": "XLR"
+      }
+    ]
+  },
+  {
+    "BrandId": 3,
+    "BrandName": "Kia",
+    "Models": [
+      {
+        "ModelId": 57,
+        "ModelName": "Picanto"
+      },
+      {
+        "ModelId": 58,
+        "ModelName": "Pride"
+      },
+      {
+        "ModelId": 59,
+        "ModelName": "Rio"
+      },
+      {
+        "ModelId": 60,
+        "ModelName": "Soul"
+      },
+      {
+        "ModelId": 61,
+        "ModelName": "Avella"
+      },
+      {
+        "ModelId": 62,
+        "ModelName": "Cee'd"
+      },
+      {
+        "ModelId": 63,
+        "ModelName": "Sephia"
+      },
+      {
+        "ModelId": 64,
+        "ModelName": "Cerato"
+      },
+      {
+        "ModelId": 65,
+        "ModelName": "Forte"
+      },
+      {
+        "ModelId": 66,
+        "ModelName": "Shuma"
+      },
+      {
+        "ModelId": 67,
+        "ModelName": "Concord"
+      },
+      {
+        "ModelId": 68,
+        "ModelName": "Clarus"
+      },
+      {
+        "ModelId": 69,
+        "ModelName": "Magentis"
+      },
+      {
+        "ModelId": 70,
+        "ModelName": "Stinger"
+      },
+      {
+        "ModelId": 71,
+        "ModelName": "Potentia"
+      },
+      {
+        "ModelId": 72,
+        "ModelName": "Enterprise"
+      },
+      {
+        "ModelId": 73,
+        "ModelName": "Opirus"
+      },
+      {
+        "ModelId": 74,
+        "ModelName": "Cadenza"
+      },
+      {
+        "ModelId": 75,
+        "ModelName": "Quoris"
+      },
+      {
+        "ModelId": 76,
+        "ModelName": "Elan"
+      },
+      {
+        "ModelId": 77,
+        "ModelName": "Venga"
+      },
+      {
+        "ModelId": 78,
+        "ModelName": "Carens"
+      },
+      {
+        "ModelId": 79,
+        "ModelName": "Joice"
+      },
+      {
+        "ModelId": 80,
+        "ModelName": "Carnival"
+      },
+      {
+        "ModelId": 81,
+        "ModelName": "Retona"
+      },
+      {
+        "ModelId": 82,
+        "ModelName": "Stonic"
+      },
+      {
+        "ModelId": 83,
+        "ModelName": "Niro"
+      },
+      {
+        "ModelId": 84,
+        "ModelName": "Sportage"
+      },
+      {
+        "ModelId": 85,
+        "ModelName": "Sorento"
+      },
+      {
+        "ModelId": 86,
+        "ModelName": "Mohave"
+      },
+      {
+        "ModelId": 87,
+        "ModelName": "Bongo"
+      },
+      {
+        "ModelId": 88,
+        "ModelName": "Bongo Frontier"
+      }
+    ]
+  },
+  {
+    "BrandId": 4,
+    "BrandName": "Volkswagen",
+    "Models": [
+      {
+        "ModelId": 89,
+        "ModelName": "Fusca"
+      },
+      {
+        "ModelId": 90,
+        "ModelName": "Gol"
+      },
+      {
+        "ModelId": 91,
+        "ModelName": "Voyage"
+      },
+      {
+        "ModelId": 92,
+        "ModelName": "Parati"
+      },
+      {
+        "ModelId": 93,
+        "ModelName": "Fox"
+      },
+      {
+        "ModelId": 94,
+        "ModelName": "Brasilia"
+      },
+      {
+        "ModelId": 95,
+        "ModelName": "Apollo"
+      },
+      {
+        "ModelId": 96,
+        "ModelName": "Logus"
+      },
+      {
+        "ModelId": 97,
+        "ModelName": "Pointer"
+      },
+      {
+        "ModelId": 98,
+        "ModelName": "Santana"
+      },
+      {
+        "ModelId": 99,
+        "ModelName": "Quantum"
+      },
+      {
+        "ModelId": 100,
+        "ModelName": "SpaceFox"
+      },
+      {
+        "ModelId": 101,
+        "ModelName": "SP2"
+      },
+      {
+        "ModelId": 102,
+        "ModelName": "Saveiro"
+      },
+      {
+        "ModelId": 103,
+        "ModelName": "Golf"
+      },
+      {
+        "ModelId": 104,
+        "ModelName": "Passat"
+      }
+    ]
+  }
+]
