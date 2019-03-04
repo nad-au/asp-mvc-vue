@@ -12,7 +12,14 @@
             <form asp-controller="Select2WithOptions" asp-action="Index" data-ajax="true" data-ajax-method="POST" data-ajax-update="#Updated">
                 <div class="form-group row">
                     @Html.LabelFor(m => m.BrandIds, new { @class = "col-sm-2 col-form-label" })
-                    <div class="col-sm-10">
+                    <div class="col-sm-1">
+                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                            <button v-on:click="selectAllCurrentBrands" type="button" class="btn btn-outline-success">All Current</button>
+                            <button v-on:click="selectAllPreviousBrands" type="button" class="btn btn-outline-success">All Previous</button>
+                            <button v-on:click="clearSelectedBrands" type="button" class="btn btn-outline-success">Clear</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
                         <vue-select2-multiple-managed class="form-control"
                                                       id="@Html.IdFor(m => m.BrandIds)"
                                                       name="@Html.NameFor(m => m.BrandIds)"
@@ -26,7 +33,14 @@
 
                 <div class="form-group row">
                     @Html.LabelFor(m => m.ModelIds, new { @class = "col-sm-2 col-form-label" })
-                    <div class="col-sm-10">
+                    <div class="col-sm-1">
+                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                            <button v-on:click="selectAllCurrentModels" type="button" class="btn btn-outline-success">All Current</button>
+                            <button v-on:click="selectAllPreviousModels" type="button" class="btn btn-outline-success">All Previous</button>
+                            <button v-on:click="clearSelectedModels" type="button" class="btn btn-outline-success">Clear</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
                         <vue-select2-multiple-managed class="form-control"
                                                       id="@Html.IdFor(m => m.ModelIds)"
                                                       name="@Html.NameFor(m => m.ModelIds)"
@@ -40,13 +54,7 @@
 
                 <div class="form-group row">
                     <div class="col-sm-10">
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-sm-10">
                         <button class="btn btn-primary" type="submit">Submit</button>
-                        <button v-on:click="selectedBrandIds = []" class="btn btn-warning" type="button">Clear</button>
                         @Html.ActionLink("Cancel", "Index", "Home", null, new { @class = "btn btn-secondary" })
                     </div>
                 </div>

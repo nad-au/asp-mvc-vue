@@ -35,61 +35,72 @@ const app = new Vue({
     },
     methods: {
         getAllBrands() {
-            const select2CurrentBrands = [{
-                    id: 0,
-                    text: 'Current',
-                    children: this.cars
-                        .filter(car => car.current)
-                        .map(car => {
-                            return {
-                                id: car.brandId,
-                                text: car.brandName
-                            };
-                        })
-                        .sort(this.textSort)
-                }
-            ];
-
-            const select2PreviousBrands = [{
-                    id: 0,
-                    text: 'Previous',
-                    children: this.cars
-                        .filter(car => !car.current)
-                        .map(car => {
-                            return {
-                                id: car.brandId,
-                                text: car.brandName
-                            };
-                        })
-                        .sort(this.textSort)
-                }
-            ];
-
-            return select2CurrentBrands.concat(select2PreviousBrands);
+            let allBrands = [];
+            allBrands = allBrands
+                .concat(this.getCurrentBrands())
+                .concat(this.getPreviousBrands());
+            return allBrands;
+        },
+        getCurrentBrands() {
+            return {
+                id: 0,
+                text: 'Current',
+                children: this.cars
+                    .filter(car => car.current)
+                    .map(car => {
+                        return {
+                            id: car.brandId,
+                            text: car.brandName
+                        };
+                    })
+                    .sort(this.textSort)
+            };
+        },
+        getPreviousBrands() {
+            return {
+                id: 0,
+                text: 'Previous',
+                children: this.cars
+                    .filter(car => !car.current)
+                    .map(car => {
+                        return {
+                            id: car.brandId,
+                            text: car.brandName
+                        };
+                    })
+                    .sort(this.textSort)
+            };
         },
         getAvailableModels(selectedBrandIds) {
+            let allAvailableModels = [];
+            allAvailableModels = allAvailableModels
+                .concat(this.getAvailableCurrentModels(selectedBrandIds))
+                .concat(this.getAvailablePreviousModels(selectedBrandIds));
+            return allAvailableModels;
+        },
+        getAvailableCurrentModels(selectedBrandIds) {
             var availableCurrentModels = [];
             this.cars
                 .filter(car => selectedBrandIds.includes(car.brandId))
                 .forEach(car => {
                     availableCurrentModels = availableCurrentModels.concat(
                         car.models
-                            .filter(model => model.current)
-                            .map(model => {
-                                return {
-                                    id: model.modelId,
-                                    text: model.modelName
-                                }})
+                        .filter(model => model.current)
+                        .map(model => {
+                            return {
+                                id: model.modelId,
+                                text: model.modelName
+                            }})
                     );
                 });
 
-            const select2CurrentModels = [{
-                    id: 0,
-                    text: 'Current',
-                    children: availableCurrentModels.sort(this.textSort)
-                }
-            ];
-
+            return {
+                id: 0,
+                text: 'Current',
+                children: availableCurrentModels.sort(this.textSort)
+            };
+        },
+        getAvailablePreviousModels(selectedBrandIds) {
             var availablePreviousModels = [];
             this.cars
                 .filter(car => selectedBrandIds.includes(car.brandId))
@@ -105,14 +116,41 @@ const app = new Vue({
                     );
                 });
 
-            const select2PreviousModels = [{
-                    id: 0,
-                    text: 'Previous',
-                    children: availablePreviousModels.sort(this.textSort)
-                }
-            ];
-
-            return select2CurrentModels.concat(select2PreviousModels);
+            return {
+                id: 0,
+                text: 'Previous',
+                children: availablePreviousModels.sort(this.textSort)
+            };
+        },
+        selectAllCurrentBrands() {
+            let newSelectedBrandIds = this.selectedBrandIds;
+            newSelectedBrandIds = newSelectedBrandIds
+                .concat(this.getCurrentBrands().children.map(s => { return s.id }));
+            this.selectedBrandIds = [...new Set(newSelectedBrandIds)];
+        },
+        selectAllPreviousBrands() {
+            let newSelectedBrandIds = this.selectedBrandIds;
+            newSelectedBrandIds = newSelectedBrandIds
+                .concat(this.getPreviousBrands().children.map(s => { return s.id }));
+            this.selectedBrandIds = [...new Set(newSelectedBrandIds)];
+        },
+        clearSelectedBrands() {
+            this.selectedBrandIds = [];
+        },
+        selectAllCurrentModels() {
+            let newSelectedModelIds = this.selectedModelIds;
+            newSelectedModelIds = newSelectedModelIds
+                .concat(this.getAvailableCurrentModels(this.selectedBrandIds).children.map(s => { return s.id }));
+            this.selectedModelIds = [...new Set(newSelectedModelIds)];
+        },
+        selectAllPreviousModels() {
+            let newSelectedModelIds = this.selectedModelIds;
+            newSelectedModelIds = newSelectedModelIds
+                .concat(this.getAvailablePreviousModels(this.selectedBrandIds).children.map(s => { return s.id }));
+            this.selectedModelIds = [...new Set(newSelectedModelIds)];
+        },
+        clearSelectedModels() {
+            this.selectedModelIds = [];
         },
         textSort(selectItem1, selectItem2) {
             var upperItem1 = selectItem1.text.toUpperCase(),
